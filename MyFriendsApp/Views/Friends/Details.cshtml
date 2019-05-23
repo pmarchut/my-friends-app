@@ -1,0 +1,39 @@
+﻿@model Friend
+@{
+    ViewBag.Title = Model.FirstName + ' ' + Model.LastName + "'s Details";
+}
+
+<br />
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <h3>@ViewBag.Title</h3>
+
+        <h4>
+            Friend Id: @Model.Id
+        </h4>
+        <h4>
+            Pseudonym: @Model.Pseudonym
+        </h4>
+        <h4>
+            Telephone: @Model.Telephone
+        </h4>
+        <h4>
+            Email: @Model.Email
+        </h4>
+        <h4>
+            Address: @Model.Address
+        </h4>
+        <h4>
+            City: @Model.City
+        </h4>
+        <h4>
+            Postal Code: @Model.PostalCode
+        </h4>
+        <h4>
+            Notes: @Model.Notes
+        </h4>
+        <a asp-controller="Friends" asp-action="Index" class="btn btn-primary m-1">Back</a>
+        <a asp-controller="Friends" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary m-1">Edit</a>
+        <a asp-controller="Friends" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger m-1">Delete</a>
+    </div>
+</div>
